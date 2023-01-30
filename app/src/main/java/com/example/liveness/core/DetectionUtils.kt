@@ -43,9 +43,9 @@ object DetectionUtils {
         return x * x + y * y
     }
 
-    // 将检测区域抽象成 8x8 窗格计算
-    // - 人脸中心点限定在中间的 4x4 方块中
-    // - 人脸不能大于 6x6 且不能小于 3x3
+    // Abstract the detection area into an 8x8 pane calculation
+    // - The center of the face is confined to the middle 4x4 square
+    // - the face cannot be larger than 6x6 and cannot be smaller than 3x3
     fun isFaceInDetectionRect(face: Face, detectionSize: Int): Boolean {
         val fRect = face.boundingBox
         val fx = fRect.centerX()
